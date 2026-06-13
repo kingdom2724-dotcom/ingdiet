@@ -1,1 +1,600 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아이엔지 다이어트 | 한의원 도입 브랜드 패키지</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,800;0,900;1,900&display=swap" rel="stylesheet">
+<style>
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css");
 
+:root{
+  --yellow:#ECEA3C; --yellow-deep:#D9D71F;
+  --ink:#0C0C0A; --ink-soft:#1A1A17;
+  --paper:#FFFFFF; --mist:#F4F4F0; --line:#E3E3DD; --gray:#6E6E66;
+  --kr:"Pretendard Variable",Pretendard,-apple-system,system-ui,sans-serif;
+  --en:"Archivo","Pretendard Variable",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--kr);background:var(--paper);color:var(--ink);line-height:1.6;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;overflow-x:hidden;word-break:keep-all;overflow-wrap:break-word;}
+img{max-width:100%;display:block;}
+.wrap{width:100%;margin:0 auto;background:var(--paper);position:relative;}
+
+/* header */
+.topbar{position:sticky;top:0;z-index:60;background:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:15px 20px;}
+.logo{display:flex;align-items:baseline;gap:7px;}
+.logo .mark{font-family:var(--en);font-weight:900;font-size:26px;color:var(--yellow);letter-spacing:-0.04em;line-height:1;}
+.logo .sub{font-size:11px;color:#8d8d82;font-weight:600;}
+.topbar .top-cta{background:var(--yellow);color:var(--ink);font-weight:800;font-size:12.5px;padding:9px 16px;border-radius:100px;text-decoration:none;}
+
+/* hero */
+.hero{background:linear-gradient(180deg,#F5F5F0 0%,#EAEAE3 100%);color:var(--ink);padding:34px 24px 44px;position:relative;overflow:hidden;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:-0.01em;margin-bottom:16px;}
+.eyebrow .ing{font-family:var(--en);font-style:italic;font-weight:900;background:var(--yellow);padding:1px 9px;border-radius:6px;}
+.eyebrow .b2b{font-family:var(--en);font-weight:800;letter-spacing:0.12em;color:var(--gray);font-size:11px;}
+.hero h1{font-size:clamp(27px,7.6vw,34px);font-weight:800;line-height:1.32;letter-spacing:-0.035em;}
+.hero h1 .hl{background:linear-gradient(transparent 56%,var(--yellow) 56%);padding:0 3px;}
+.hero p.lead{margin-top:18px;font-size:14.5px;color:#4f4f47;line-height:1.75;}
+.hero p.lead b{color:var(--ink);}
+.hero .specs{margin-top:22px;display:flex;flex-direction:column;gap:10px;}
+.hero .specs li{display:flex;gap:10px;font-size:14px;color:#2d2d28;align-items:flex-start;}
+.hero .specs .chk{color:var(--yellow-deep);font-weight:900;font-family:var(--en);flex-shrink:0;}
+.hero .ctas{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ink);color:var(--yellow);font-weight:800;font-size:15px;padding:16px 26px;border-radius:100px;border:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;text-decoration:none;}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(12,12,10,0.22);}
+.cta.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+.cta .arr{font-family:var(--en);font-weight:900;}
+
+/* hero package panel */
+.hero-visual{margin-top:28px;}
+.kv-card{max-width:460px;margin:0 auto;border-radius:24px;overflow:hidden;background:#F2F0E7;box-shadow:0 28px 56px rgba(0,0,0,.16);}
+.kv-card svg{width:100%;display:block;}
+.hb-copy{position:relative;z-index:2;}
+.big-title{font-size:34px;font-weight:800;line-height:1.3;letter-spacing:-0.035em;margin-top:8px;}
+.big-title .amount{display:inline-block;font-weight:900;font-size:1.5em;line-height:1;letter-spacing:-0.04em;background:linear-gradient(transparent 56%,var(--yellow) 56%,var(--yellow) 92%,transparent 92%);padding:0 .05em;}
+.hero-sub{margin-top:28px;}
+.pkg-strip{margin-top:32px;display:grid;grid-template-columns:1fr;background:var(--ink);border-radius:18px;overflow:hidden;}
+.pkg-cell{padding:16px 14px;display:flex;gap:11px;align-items:flex-start;border-top:1px solid #232320;}
+.pkg-cell:first-child{border-top:none;}
+.pkg-cell .pn{font-family:var(--en);font-weight:900;font-size:12px;color:var(--ink);background:var(--yellow);width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pkg-cell .pc b{color:#fff;font-size:14px;font-weight:800;display:block;}
+.pkg-cell .pc span{color:#9a9a8e;font-size:11px;line-height:1.4;}
+
+/* section base */
+section.blk{padding:54px 24px;}
+.tag{font-family:var(--en);font-weight:800;font-size:11px;letter-spacing:0.16em;color:var(--gray);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.tag::before{content:"";width:22px;height:2px;background:var(--yellow-deep);}
+h2{font-size:25px;font-weight:800;line-height:1.32;letter-spacing:-0.03em;margin-bottom:16px;}
+h2 .hl{background:linear-gradient(transparent 58%,var(--yellow) 58%);padding:0 2px;}
+.blk p.body{font-size:15px;color:#33332e;line-height:1.78;}
+.mist{background:var(--mist);}
+.dark{background:var(--ink);color:#fff;}
+.dark h2{color:#fff;} .dark .tag{color:#8d8d82;} .dark p.body{color:#cfcfc6;}
+.lead-q{font-size:18px;font-weight:800;line-height:1.5;letter-spacing:-0.03em;margin-bottom:6px;}
+
+/* pain points */
+.pains{margin-top:22px;display:flex;flex-direction:column;gap:1px;border-radius:14px;overflow:hidden;border:1px solid var(--line);}
+.pain{background:#fff;padding:16px 18px;display:flex;gap:13px;align-items:flex-start;}
+.pain:not(:first-child){border-top:1px solid var(--line);}
+.pain .x{color:#c64b3a;font-weight:900;font-family:var(--en);flex-shrink:0;font-size:15px;}
+.pain p{font-size:14px;color:#3a3a34;line-height:1.55;}
+.solve{margin-top:18px;background:var(--ink);color:#fff;border-radius:14px;padding:18px 18px;font-size:14.5px;line-height:1.7;}
+.solve b{color:var(--yellow);}
+
+/* structure blocks */
+.struct{display:flex;flex-direction:column;gap:14px;margin-top:24px;}
+.scard{border:1.5px solid var(--line);border-radius:16px;padding:20px 18px;background:#fff;}
+.scard .sh{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.scard .sh .si{font-family:var(--en);font-weight:900;font-size:11px;color:var(--ink);background:var(--yellow);padding:3px 9px;border-radius:6px;letter-spacing:0.04em;}
+.scard h3{font-size:17px;font-weight:800;}
+.scard p{font-size:13.5px;color:#55554c;line-height:1.65;}
+.prod-figure{margin-top:14px;border-radius:14px;overflow:hidden;background:var(--mist);border:1px solid var(--line);}
+.prod-figure img{width:100%;}
+.flow-inline{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;}
+.flow-inline span{font-size:11.5px;font-weight:700;color:#3a3a34;background:var(--mist);border:1px solid var(--line);border-radius:100px;padding:5px 11px;}
+
+/* pricing */
+.prices{display:flex;flex-direction:column;gap:14px;margin-top:0;}
+.pg-label{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:#fff;margin:22px 0 12px;}
+.pg-label .dot{width:7px;height:7px;border-radius:50%;background:var(--yellow);}
+.price{border-radius:18px;padding:22px 20px;border:1.5px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);position:relative;}
+.price.rep{background:var(--yellow);border-color:var(--yellow);color:var(--ink);}
+.price .rb{font-family:var(--en);font-weight:800;font-size:10px;letter-spacing:0.1em;color:var(--yellow);margin-bottom:8px;display:block;}
+.price.rep .rb{color:var(--ink);opacity:.65;}
+.price h3{font-size:19px;font-weight:800;margin-bottom:10px;}
+.price .pp{display:flex;align-items:baseline;gap:10px;margin-bottom:12px;}
+.price .normal{font-size:13px;color:#8d8d82;text-decoration:line-through;}
+.price.rep .normal{color:rgba(12,12,10,.5);}
+.price .benefit{font-family:var(--en);font-weight:900;font-size:26px;color:var(--yellow);letter-spacing:-0.02em;}
+.price.rep .benefit{color:var(--ink);}
+.price .benefit small{font-size:14px;font-weight:800;}
+.price .desc{font-size:13px;color:#c4c4bb;line-height:1.55;}
+.price.rep .desc{color:#2c2c27;}
+.price .flag{position:absolute;top:16px;right:16px;font-size:10px;font-weight:800;background:var(--ink);color:var(--yellow);padding:4px 10px;border-radius:100px;}
+.price-note{margin-top:14px;font-size:11.5px;color:#8d8d82;}
+
+/* protocol */
+.proto{display:flex;flex-direction:column;gap:16px;margin-top:24px;}
+.pcol{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:20px 18px;}
+.pcol h3{font-size:16px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.pcol h3 .dot{width:8px;height:8px;border-radius:50%;background:var(--yellow-deep);}
+.pcol ol{list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:9px;}
+.pcol ol li{counter-increment:s;font-size:13.5px;color:#3a3a34;padding-left:28px;position:relative;line-height:1.45;}
+.pcol ol li::before{content:counter(s);position:absolute;left:0;top:0;font-family:var(--en);font-weight:900;font-size:11px;color:var(--ink);background:var(--mist);border:1px solid var(--line);width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;}
+.crm{margin-top:18px;background:var(--ink);border-radius:16px;padding:20px 18px;color:#fff;}
+.crm .ch{font-size:14.5px;font-weight:800;color:var(--yellow);margin-bottom:12px;}
+.crm-tags{display:flex;flex-wrap:wrap;gap:7px;}
+.crm-tags span{font-size:12px;font-weight:600;color:#e7e7df;background:#1d1d18;border:1px solid #2a2a24;border-radius:100px;padding:6px 12px;}
+.crm .cnote{margin-top:14px;font-size:12.5px;color:#a2a296;line-height:1.6;}
+.crm .cnote b{color:var(--yellow);}
+
+/* benefits */
+.bens{display:flex;flex-direction:column;gap:1px;margin-top:24px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1);}
+.ben{display:flex;gap:16px;padding:20px 18px;background:rgba(255,255,255,.03);align-items:flex-start;}
+.ben .n{font-family:var(--en);font-weight:900;color:var(--yellow);font-size:22px;line-height:1;flex-shrink:0;width:34px;}
+.ben .c h4{font-size:16px;font-weight:800;color:#fff;margin-bottom:4px;}
+.ben .c p{font-size:13.5px;color:#b6b6ad;line-height:1.6;}
+
+/* provide packages */
+.provide{display:flex;flex-direction:column;gap:14px;margin-top:24px;}
+.pgrp{border:1.5px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;}
+.pgrp .gh{background:var(--mist);padding:13px 18px;font-size:15px;font-weight:800;display:flex;align-items:center;gap:9px;}
+.pgrp .gh .gi{font-family:var(--en);font-weight:900;font-size:11px;color:var(--ink);background:var(--yellow);padding:3px 9px;border-radius:6px;}
+.pgrp ul{list-style:none;padding:14px 18px;display:flex;flex-wrap:wrap;gap:8px;}
+.pgrp ul li{font-size:12.5px;color:#3a3a34;padding-left:18px;position:relative;width:calc(50% - 4px);}
+.pgrp ul li::before{content:"✓";position:absolute;left:0;color:var(--yellow-deep);font-weight:900;font-size:12px;}
+
+/* target list */
+.target{margin-top:22px;display:flex;flex-direction:column;gap:1px;border-radius:14px;overflow:hidden;border:1px solid var(--line);}
+.target li{background:#fff;padding:14px 18px;font-size:14px;color:#3a3a34;display:flex;gap:11px;align-items:center;}
+.target li:not(:first-child){border-top:1px solid var(--line);}
+.target li .c{color:var(--yellow-deep);font-weight:900;font-family:var(--en);}
+
+/* flow steps */
+.steps{margin-top:26px;position:relative;}
+.steps::before{content:"";position:absolute;left:18px;top:8px;bottom:8px;width:2px;background:var(--line);}
+.step{display:flex;gap:18px;padding-bottom:24px;position:relative;}
+.step:last-child{padding-bottom:0;}
+.step .dot{width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--yellow);font-family:var(--en);font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:2;}
+.step .txt h4{font-size:16px;font-weight:800;margin-bottom:4px;}
+.step .txt p{font-size:13.5px;color:var(--gray);line-height:1.6;}
+
+/* closing + form */
+.closing{background:var(--ink);color:#fff;padding:60px 24px 44px;text-align:center;}
+.closing .ing-big{font-family:var(--en);font-weight:900;font-style:italic;font-size:54px;color:var(--yellow);line-height:.9;letter-spacing:-0.04em;}
+.closing h2{font-size:25px;margin:18px 0 14px;color:#fff;}
+.closing p{font-size:15px;color:#cfcfc6;line-height:1.85;max-width:660px;margin:0 auto;}
+.formcard{background:#fff;color:var(--ink);border-radius:22px;padding:28px 22px;margin-top:30px;text-align:left;max-width:520px;margin-left:auto;margin-right:auto;}
+.formcard h3{font-size:19px;font-weight:800;margin-bottom:6px;}
+.formcard .fdesc{font-size:13px;color:var(--gray);margin-bottom:20px;}
+.frow{display:flex;gap:10px;}
+.frow .field{flex:1;}
+.field{margin-bottom:13px;}
+.field label{display:block;font-size:12px;font-weight:700;color:#444;margin-bottom:6px;}
+.field input,.field select{width:100%;padding:14px 15px;border:1.5px solid var(--line);border-radius:11px;font-family:var(--kr);font-size:14.5px;color:var(--ink);background:#fff;}
+.field input:focus,.field select:focus{outline:none;border-color:var(--ink);}
+.consent{display:flex;gap:9px;align-items:flex-start;margin:16px 0 18px;font-size:12px;color:var(--gray);line-height:1.5;}
+.consent input{width:17px;height:17px;margin-top:1px;flex-shrink:0;accent-color:var(--ink);}
+.submit{width:100%;background:var(--ink);color:var(--yellow);border:none;border-radius:100px;padding:17px;font-family:var(--kr);font-weight:800;font-size:16px;cursor:pointer;transition:transform .15s;}
+.submit:hover{transform:translateY(-2px);}
+.formdone{display:none;text-align:center;padding:20px 0;}
+.formdone.show{display:block;}
+.formdone .ic{font-family:var(--en);font-weight:900;font-size:34px;color:var(--yellow-deep);}
+.formdone p{color:var(--ink);font-weight:700;margin-top:8px;}
+
+.pcbr{display:none;}
+.cases{display:flex;flex-direction:column;gap:18px;margin-top:24px;}
+.case{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px 18px;}
+.case-head .ct{font-size:16px;font-weight:800;color:#fff;display:block;}
+.case-head .cs{font-size:12px;color:#9a9a8e;}
+.case-head .delta{margin-top:10px;font-weight:900;font-size:24px;color:#fff;display:flex;align-items:baseline;gap:9px;}
+.case-head .delta small{font-size:14px;color:#9a9a8e;font-weight:700;}
+.case-head .delta .arr{color:var(--yellow);font-family:var(--en);}
+.case-head .delta b{color:var(--yellow);font-size:1.45em;}
+.case-chart{margin-top:12px;}
+.growth{width:100%;display:block;}
+.proof-note{margin-top:16px;font-size:11px;color:#7a7a70;line-height:1.5;}
+/* footer */
+footer{background:#070705;color:#7a7a70;padding:34px 24px 100px;font-size:11px;line-height:1.7;}
+footer .ft-logo{font-family:var(--en);font-weight:900;color:var(--yellow);font-size:18px;margin-bottom:12px;}
+footer .compliance{border-top:1px solid #1d1d18;margin-top:16px;padding-top:16px;color:#5c5c54;}
+
+/* floating + sticky */
+.fab{position:fixed;right:16px;bottom:96px;z-index:70;}
+.fab a{width:52px;height:52px;border-radius:50%;background:var(--yellow);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 6px 18px rgba(0,0,0,.25);text-decoration:none;}
+.sticky-cta{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;z-index:65;background:rgba(12,12,10,0.96);backdrop-filter:blur(8px);display:flex;gap:10px;padding:12px 16px;align-items:center;border-top:1px solid #222;}
+.sticky-cta .lbl{flex:1;color:#fff;font-size:13px;font-weight:700;line-height:1.3;}
+.sticky-cta .lbl span{color:var(--yellow);}
+.sticky-cta button{background:var(--yellow);color:var(--ink);border:none;border-radius:100px;font-family:var(--kr);font-weight:800;font-size:14px;padding:13px 22px;cursor:pointer;white-space:nowrap;}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease;}
+.rv.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+
+/* desktop / PC */
+@media (min-width:880px){
+  .pcbr{display:inline;}
+  .cases{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .wrap{box-shadow:none;}
+  .topbar{padding:20px max(28px,calc((100% - 1120px)/2));}
+  .logo .mark{font-size:30px;} .logo .sub{font-size:13px;}
+  .hero{padding:104px max(40px,calc((100% - 1120px)/2)) 64px;}
+  .hero-band{display:grid;grid-template-columns:1fr 1.08fr;align-items:center;gap:60px;min-height:540px;}
+  .big-title{font-size:60px;line-height:1.22;}
+  .hero-sub{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start;margin-top:46px;}
+  .hero-sub .specs{margin-top:2px;}
+  .hero-visual{margin-top:0;}
+  .kv-card{margin:0 0 0 auto;max-width:580px;}
+  .pkg-strip{grid-template-columns:repeat(5,1fr);}
+  .pkg-cell{border-top:none;border-left:1px solid #232320;flex-direction:column;gap:10px;}
+  .pkg-cell:first-child{border-left:none;}
+  .hero h1{font-size:36px;}
+  .hero p.lead{font-size:16px;max-width:540px;}
+  section.blk{padding:88px max(40px,calc((100% - 1000px)/2));}
+  h2{font-size:34px;line-height:1.28;} .blk p.body{font-size:16.5px;max-width:760px;} .tag{font-size:12px;}
+  .lead-q{font-size:22px;}
+  .pains,.target{max-width:840px;}
+  .struct{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;}
+  .scard.full{grid-column:1 / -1;}
+  .prices{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .prices.three{grid-template-columns:1fr 1fr 1fr;}
+  .proto{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .crm{grid-column:1 / -1;}
+  .bens{max-width:880px;}
+  .provide{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .steps{max-width:760px;}
+  .closing{padding:100px max(40px,calc((100% - 1000px)/2)) 70px;}
+  .closing .ing-big{font-size:84px;} .closing h2{font-size:34px;}
+  footer{padding:44px max(40px,calc((100% - 1000px)/2)) 96px;}
+  .fab{right:24px;bottom:112px;} .fab a{width:58px;height:58px;}
+  .sticky-cta{padding:14px max(40px,calc((100% - 1120px)/2));}
+  .sticky-cta .lbl{font-size:15px;flex:none;margin-right:auto;}
+  .sticky-cta button{font-size:15px;padding:14px 30px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topbar">
+    <div class="logo"><span class="mark">ING.</span><span class="sub">한의원 도입 패키지</span></div>
+    <a href="#form" class="top-cta" onclick="goForm()">도입 상담</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-band">
+      <div class="hb-copy">
+        <span class="eyebrow"><span class="ing">ing.</span><span class="b2b">FOR CLINIC · 한의원 도입 제안</span></span>
+        <h1 class="big-title">우리 한의원 다이어트 매출<br><span class="amount">1억</span> 만들기 프로젝트</h1>
+      </div>
+      <div class="hero-visual">
+        <div class="kv-card"><svg class="kv-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" role="img" aria-label="한의원 다이어트 매출 1억 성장 키비주얼">
+<rect width="640" height="540" fill="#F2F0E7"/>
+<circle cx="486" cy="158" r="130" fill="#ECEA3C"/>
+<circle cx="486" cy="158" r="130" fill="none" stroke="#0C0C0A" stroke-width="2.5"/>
+<rect x="78" y="360" width="66" height="92" rx="9" fill="#0C0C0A"/><rect x="168" y="302" width="66" height="150" rx="9" fill="#0C0C0A"/><rect x="258" y="236" width="66" height="216" rx="9" fill="#0C0C0A"/><rect x="348" y="160" width="66" height="292" rx="9" fill="#0C0C0A"/><rect x="438" y="80" width="66" height="372" rx="9" fill="#ECEA3C" stroke="#0C0C0A" stroke-width="3"/>
+<polyline points="111.0,344 201.0,286 291.0,220 381.0,144 471.0,64" fill="none" stroke="#0C0C0A" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M465.0 30 L493.0 58 L459.0 68 Z" fill="#0C0C0A"/>
+<rect x="360" y="30" width="176" height="70" rx="16" fill="#0C0C0A"/>
+<text x="448" y="58" text-anchor="middle" font-family="Pretendard, sans-serif" font-weight="700" font-size="13" fill="#9a9a8e">매출 목표</text>
+<text x="448" y="89" text-anchor="middle" font-family="Pretendard, sans-serif" font-weight="900" font-size="27" fill="#ECEA3C">1억</text>
+<text x="60" y="500" font-family="Archivo, sans-serif" font-weight="900" font-style="italic" font-size="72" fill="#0C0C0A" letter-spacing="-2">ing<tspan fill="#D9D71F">.</tspan></text>
+</svg></div>
+      </div>
+    </div>
+    <div class="hero-sub">
+      <p class="lead">아이엔지 다이어트는 ES한약 기반 맞춤 농축 한약을, 한의원에서 <b>바로 판매 가능한 다이어트 프로그램</b>으로 구성한 브랜드 패키지입니다. 단순 한약 공급이 아니라 제품 구성 · 가격표 · 상담 프로토콜 · 고객 안내문 · CRM 메시지 · 랜딩페이지 구조까지 함께 제공합니다.</p>
+      <ul class="specs">
+        <li><span class="chk">+</span> 한약 3단계(베이직·스페셜·커스텀) 구성</li>
+        <li><span class="chk">+</span> 체질별 4가지 처방 컴셉</li>
+        <li><span class="chk">+</span> 리포사 병행 패키지 설계</li>
+        <li><span class="chk">+</span> 비대면/대면 상담 프로토콜 제공</li>
+        <li><span class="chk">+</span> 카카오채널 CRM 메시지 제공</li>
+      </ul>
+    </div>
+    <div class="pkg-strip">
+      <div class="pkg-cell"><span class="pn">01</span><span class="pc"><b>브랜드 패키지</b><span>네이밍 · 프로그램 문구 · 상세페이지</span></span></div>
+      <div class="pkg-cell"><span class="pn">02</span><span class="pc"><b>제품 패키지</b><span>ES한약 농축 한약 · 3단계 구성</span></span></div>
+      <div class="pkg-cell"><span class="pn">03</span><span class="pc"><b>상담 패키지</b><span>초진/재진 · 비대면/대면 프로세스</span></span></div>
+      <div class="pkg-cell"><span class="pn">04</span><span class="pc"><b>마케팅 패키지</b><span>SNS/바이럴/인플루언서 마케팅 지원</span></span></div>
+      <div class="pkg-cell"><span class="pn">05</span><span class="pc"><b>CRM 패키지</b><span>카카오채널 메시지 · 재구매/전환 안내</span></span></div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="blk mist rv" id="why">
+    <div class="tag">WHY · 왜 아이엔지인가</div>
+    <h2>한약은 팔고 있는데,<br><span class="hl">매출로 안 이어진다면</span></h2>
+    <p class="body">많은 한의원이 한약을 판매하지만, 실제 운영에서는 같은 문제가 반복됩니다.</p>
+    <div class="pains">
+      <div class="pain"><span class="x">!</span><p>상품명이 약해 고객이 기억하지 못합니다.</p></div>
+      <div class="pain"><span class="x">!</span><p>가격 구조가 정리되지 않아 상담 직원마다 안내가 달라집니다.</p></div>
+      <div class="pain"><span class="x">!</span><p>원장 진료와 상담실 안내가 분리되어 전환율이 낮아집니다.</p></div>
+      <div class="pain"><span class="x">!</span><p>복용 후 관리가 약해 재구매·재진으로 이어지지 않습니다.</p></div>
+      <div class="pain"><span class="x">!</span><p>광고 소재와 랜딩페이지가 없어 신규 유입이 어렵습니다.</p></div>
+    </div>
+    <div class="solve">아이엔지 다이어트는 한의원 다이어트 진료를 <b>상품화·브랜드화·프로그램화</b>하는 도입형 패키지로 구성되었습니다.</div>
+  </section>
+
+  <!-- STRUCTURE -->
+  <section class="blk rv">
+    <div class="tag">STRUCTURE · 도입 구조</div>
+    <h2>처방은 원장님이,<br><span class="hl">운영 구조는</span> 아이엔지가</h2>
+    <div class="struct">
+      <div class="scard">
+        <div class="sh"><span class="si">BRAND</span><h3>브랜드</h3></div>
+        <p>고객에게 노출되는 다이어트 프로그램명입니다. 기존 한약 다이어트를 더 전문적이고 기억하기 쉬운 브랜드로 판매할 수 있습니다.</p>
+      </div>
+      <div class="scard">
+        <div class="sh"><span class="si">PRODUCT</span><h3>제품 기반</h3></div>
+        <p>ES한약 맞춤 농축 한약을 기반으로 합니다. 맞춤 농축 한약을 활용해 고객 신뢰도를 높이기 좋습니다.</p>
+      </div>
+      <div class="scard full">
+        <div class="sh"><span class="si">CARE</span><h3>진료 구조</h3></div>
+        <p>한의사 진단을 중심으로 한 표준 진료 플로우로 운영됩니다.</p>
+        <div class="flow-inline">
+          <span>초진 상담</span><span>체성분 검사</span><span>체질·유형 진단</span><span>아이엔지 한약 처방</span><span>리포사 병행 결정</span><span>복용 안내</span><span>2주 후 체크</span><span>1개월 재평가</span><span>장기·유지 관리</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="blk dark rv" id="price">
+    <div class="tag">PRODUCT · 상품·가격 구조</div>
+    <h2>바로 상담 상품으로<br>쓸 수 있는 상품 구성</h2>
+    <p class="body">진입 상품부터 객단가를 높이는 대표 프로그램까지, 고객 상태와 예산에 따라 자연스럽게 업셀링할 수 있습니다.</p>
+    <div class="pg-label"><span class="dot"></span>아이엔지 한약 · 4주 단위</div>
+    <div class="prices three">
+      <div class="price">
+        <span class="rb">STANDARD · 베이직형</span>
+        <h3>아이엔지 한약 베이직형</h3>
+        <div class="pp"><span class="benefit">8<small>만원~</small></span></div>
+        <p class="desc">4주 · 8~14만원 라인업. 입문·체험·광고 유입 고객에게 적합한 진입 상품.</p>
+      </div>
+      <div class="price rep">
+        <span class="flag">추천</span>
+        <span class="rb">SPECIAL · 스페셜형</span>
+        <h3>아이엔지 한약 스페셜형</h3>
+        <div class="pp"><span class="benefit">20<small>만원~</small></span></div>
+        <p class="desc">4주 · 20~40만원 라인업. 체질 맞춤을 강화한 본격 감량 상품.</p>
+      </div>
+      <div class="price">
+        <span class="rb">CUSTOM · 커스텀형</span>
+        <h3>아이엔지 한약 커스텀형</h3>
+        <div class="pp"><span class="benefit">50<small>만원~</small></span></div>
+        <p class="desc">4주 · 50만원~ 개인 최적화. 1:1 맞춤 처방으로 고관여·VIP 고객 대상.</p>
+      </div>
+    </div>
+    <div class="pg-label"><span class="dot"></span>리포사 병행 (선택)</div>
+    <div class="prices">
+      <div class="price">
+        <span class="rb">ING 30 × 리포사</span>
+        <h3>아이엔지 한약 × 리포사 30일</h3>
+        <div class="pp"><span class="benefit">39<small>만원</small></span></div>
+        <p class="desc">부분비만 시술 + 한약 결합 집중 상품. 단기 성과 고객 상담 전환에 강함.</p>
+      </div>
+      <div class="price rep">
+        <span class="flag">대표 · 객단가</span>
+        <span class="rb">ING 100 × 리포사</span>
+        <h3>아이엔지 한약 × 리포사 100일</h3>
+        <div class="pp"><span class="normal">130만원</span><span class="benefit">96<small>만원</small></span></div>
+        <p class="desc">객단가를 높이는 대표 프로그램. 체중 감량과 라인 관리를 함께 원하는 고객에게 적합.</p>
+      </div>
+    </div>
+    <p class="price-note">* 정상가·혜택가는 예시 구성이며, 도입 한의원의 진료 정책·지역 단가에 맞춰 조정 가능합니다.</p>
+  </section>
+
+  <!-- PROTOCOL -->
+  <section class="blk mist rv">
+    <div class="tag">PROTOCOL · 상담 프로토콜</div>
+    <h2>직원이 그대로 따라 하는<br><span class="hl">상담 동선</span></h2>
+    <div class="proto">
+      <div class="pcol">
+        <h3><span class="dot"></span>비대면 상담</h3>
+        <ol>
+          <li>SNS·카카오채널에 상담 폼 세팅 → DB 확보</li>
+          <li>상담 폼 작성 및 연락 가능 시간 확인</li>
+          <li>직원이 상담 시간 확정</li>
+          <li>원장 비대면 상담 및 처방</li>
+          <li>한약 발송 → 배송 후 복용법 안내</li>
+          <li>2주 후 복용 여부·변화 확인</li>
+        </ol>
+      </div>
+      <div class="pcol">
+        <h3><span class="dot"></span>대면 상담</h3>
+        <ol>
+          <li>네이버예약·카카오채널 예약 링크 세팅</li>
+          <li>검색·광고·SNS로 DB 유입</li>
+          <li>직원 예약 확정</li>
+          <li>내원 후 상담 및 처방</li>
+          <li>한약 배송 → 배송 후 복용법 안내</li>
+          <li>2주 후 복용 여부·변화 확인</li>
+        </ol>
+      </div>
+      <div class="crm">
+        <div class="ch">+ 함께 제공되는 카카오채널 CRM 메시지</div>
+        <div class="crm-tags">
+          <span>친구추가 인사말</span><span>상담 접수 안내</span><span>복용법 안내</span><span>식단 안내</span><span>2주 체크</span><span>재구매 안내</span><span>장기 전환 안내</span><span>유지기 관리</span>
+        </div>
+        <p class="cnote">한의원은 대개 처방은 잘하지만, <b>복용 후 관리와 재구매 설계가 약합니다.</b> 아이엔지는 이 약한 구간을 CRM으로 잡아 재진·재구매로 연결합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="blk dark rv">
+    <div class="tag">VALUE · 도입 장점</div>
+    <h2>도입하면<br><span class="hl">달라지는 것</span></h2>
+    <div class="bens">
+      <div class="ben"><span class="n">01</span><div class="c"><h4>바로 판매 가능한 상품 구조</h4><p>베이직·스페셜·커스텀·리포사 병행까지 구성돼 별도 기획 없이 바로 상담 상품으로 활용할 수 있습니다.</p></div></div>
+      <div class="ben"><span class="n">02</span><div class="c"><h4>객단가 설계가 쉽습니다</h4><p>15만→45만→39만→96만 구간이 짜여 있어 고객 상태·예산별 업셀링이 자연스럽습니다.</p></div></div>
+      <div class="ben"><span class="n">03</span><div class="c"><h4>한의사 전문성이 살아납니다</h4><p>제품 판매가 아닌 체질 진단·처방 중심. 보조제·식욕억제제와 다른 전문 관리 프로그램으로 포지셔닝됩니다.</p></div></div>
+      <div class="ben"><span class="n">04</span><div class="c"><h4>리포사 결합으로 시술 매출</h4><p>한약만으로는 객단가·체감에 한계. 병행 상품으로 감량과 부분 라인 니즈를 함께 잡습니다.</p></div></div>
+      <div class="ben"><span class="n">05</span><div class="c"><h4>마케팅 소재화가 쉽습니다</h4><p>식욕형·부종형·스트레스형·대사저하형 분류는 블로그·인스타·카페·숏폼·배너로 확장하기 좋습니다.</p></div></div>
+    </div>
+  </section>
+
+  <!-- PROVIDE -->
+  <section class="blk rv">
+    <div class="tag">INCLUDED · 제공 항목</div>
+    <h2>도입 시<br><span class="hl">함께 드리는 것</span></h2>
+    <div class="provide">
+      <div class="pgrp">
+        <div class="gh"><span class="gi">A</span>브랜드 패키지</div>
+        <ul><li>아이엔지 네이밍</li><li>다이어트 프로그램 제공</li><li>고객용 상세페이지</li><li>한의원용 필요자료</li></ul>
+      </div>
+      <div class="pgrp">
+        <div class="gh"><span class="gi">B</span>제품 패키지</div>
+        <ul><li>ES한약 기반 농축 한약</li><li>아이엔지 한약 구성</li><li>베이직·스페셜·커스텀 구성</li><li>리포사 병행 구성</li></ul>
+      </div>
+      <div class="pgrp">
+        <div class="gh"><span class="gi">C</span>상담 패키지</div>
+        <ul><li>초진 프로토콜</li><li>재진 프로토콜</li><li>비대면 프로세스</li><li>대면 프로세스</li></ul>
+      </div>
+      <div class="pgrp">
+        <div class="gh"><span class="gi">D</span>마케팅 패키지</div>
+        <ul><li>SNS 마케팅</li><li>바이럴 마케팅</li><li>인플루언서 마케팅</li><li>브랜드 마케팅</li></ul>
+      </div>
+      <div class="pgrp">
+        <div class="gh"><span class="gi">E</span>CRM 패키지</div>
+        <ul><li>친구추가 메시지</li><li>복용법 안내</li><li>식단 안내</li><li>재구매·전환 안내</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET -->
+  <section class="blk mist rv">
+    <div class="tag">FIT · 도입 대상</div>
+    <h2>이런 한의원에<br><span class="hl">특히 잘 맞습니다</span></h2>
+    <ul class="target">
+      <li><span class="c">✓</span> 다이어트 한약을 팔지만 상품화가 약한 한의원</li>
+      <li><span class="c">✓</span> 다이어트 진료를 시작하고 싶은 한의원</li>
+      <li><span class="c">✓</span> 기존 고객에게 추가 매출 상품이 필요한 한의원</li>
+      <li><span class="c">✓</span> 리포사·약침 등 부분비만 시술과 결합하고 싶은 한의원</li>
+      <li><span class="c">✓</span> 특화 상품이 필요한 한의원</li>
+    </ul>
+  </section>
+
+  <!-- FLOW -->
+  <section class="blk rv">
+    <div class="tag">ONBOARDING · 운영 플로우</div>
+    <h2>도입부터 매출까지,<br><span class="hl">6단계로</span></h2>
+    <div class="steps">
+      <div class="step"><span class="dot">01</span><div class="txt"><h4>도입 상담</h4><p>현재 다이어트 진료 구조와 판매 상품을 확인합니다.</p></div></div>
+      <div class="step"><span class="dot">02</span><div class="txt"><h4>상품 세팅</h4><p>베이직·스페셜·커스텀·리포사 병행 가격과 안내 방식을 세팅합니다.</p></div></div>
+      <div class="step"><span class="dot">03</span><div class="txt"><h4>상담 프로토콜 교육</h4><p>직원 상담·원장 진료·복용 안내·2주 체크 기준을 정리합니다.</p></div></div>
+      <div class="step"><span class="dot">04</span><div class="txt"><h4>랜딩·콘텐츠 적용</h4><p>마케팅 퍼널에 반영합니다.</p></div></div>
+      <div class="step"><span class="dot">05</span><div class="txt"><h4>그로스 마케팅 운영</h4><p>검색·SNS·카페 등을 통해 상담 DB를 확보합니다.</p></div></div>
+      <div class="step"><span class="dot">06</span><div class="txt"><h4>고객·매출 관리</h4><p>2주 체크 → 1개월 재평가 → 장기 전환 → 유지기 관리로 이어갑니다.</p></div></div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="blk dark rv" id="proof">
+    <div class="tag">PROOF · 성장 사례</div>
+    <h2>결과로 <span class="hl">증명</span>합니다</h2>
+    <p class="body">한의원의 1년 월매출 변화입니다.</p>
+    <div class="cases">
+      <div class="case">
+        <div class="case-head">
+          <span class="ct">강남권 다이어트 한의원</span>
+          <span class="cs">1년 월매출 결과</span>
+          <div class="delta">5천<small>↓</small> <span class="arr">→</span> <b>2억</b></div>
+        </div>
+        <div class="case-chart"><svg class="growth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 292" role="img" aria-label="월매출 성장 차트">
+<defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ECEA3C" stop-opacity="0.45"/><stop offset="1" stop-color="#ECEA3C" stop-opacity="0"/></linearGradient></defs><line x1="86" y1="250.0" x2="500" y2="250.0" stroke="#2a2a24" stroke-width="1"/><text x="76" y="254.0" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#7a7a70">0원</text><line x1="86" y1="216.0" x2="500" y2="216.0" stroke="#2a2a24" stroke-width="1"/><text x="76" y="220.0" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#7a7a70">5천</text><line x1="86" y1="182.0" x2="500" y2="182.0" stroke="#2a2a24" stroke-width="1"/><text x="76" y="186.0" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#7a7a70">1억</text><line x1="86" y1="114.0" x2="500" y2="114.0" stroke="#2a2a24" stroke-width="1"/><text x="76" y="118.0" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#7a7a70">2억</text><line x1="86" y1="46.0" x2="500" y2="46.0" stroke="#2a2a24" stroke-width="1"/><text x="76" y="50.0" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#7a7a70">3억</text>
+<path d="M 86.0 216.0 L 224.0 182.0 L 362.0 148.0 L 500.0 114.0 L 500.0 250.0 L 86.0 250.0 Z" fill="url(#g1)"/>
+<path d="M 86.0 216.0 L 224.0 182.0 L 362.0 148.0 L 500.0 114.0" fill="none" stroke="#ECEA3C" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="86.0" cy="216.0" r="5" fill="#fff"/><g><rect x="60.0" y="178.0" width="52" height="26" rx="7" fill="#1d1d18" stroke="#2f2f29" stroke-width="1"/><text x="86.0" y="196.0" text-anchor="middle" font-family="Pretendard,sans-serif" font-weight="700" font-size="13" fill="#fff">5천↓</text></g><circle cx="224.0" cy="182.0" r="5" fill="#fff"/><g><rect x="198.0" y="144.0" width="52" height="26" rx="7" fill="#1d1d18" stroke="#2f2f29" stroke-width="1"/><text x="224.0" y="162.0" text-anchor="middle" font-family="Pretendard,sans-serif" font-weight="700" font-size="13" fill="#fff">1억</text></g><circle cx="362.0" cy="148.0" r="5" fill="#fff"/><g><rect x="336.0" y="110.0" width="52" height="26" rx="7" fill="#1d1d18" stroke="#2f2f29" stroke-width="1"/><text x="362.0" y="128.0" text-anchor="middle" font-family="Pretendard,sans-serif" font-weight="700" font-size="13" fill="#fff">1.5억</text></g><circle cx="500.0" cy="114.0" r="9" fill="#ECEA3C" stroke="#0C0C0A" stroke-width="2"/><g><rect x="466.0" y="70.0" width="68" height="30" rx="8" fill="#ECEA3C"/><text x="500.0" y="91.0" text-anchor="middle" font-family="Pretendard,sans-serif" font-weight="900" font-size="16" fill="#0C0C0A">2억</text></g><text x="86.0" y="274" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12" fill="#9a9a8e">10월</text><text x="224.0" y="274" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12" fill="#9a9a8e">11월</text><text x="362.0" y="274" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12" fill="#9a9a8e">3월</text><text x="500.0" y="274" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12" fill="#9a9a8e">6월</text></svg></div>
+      </div>
+      <div class="case">
+        <div class="case-head">
+          <span class="ct">서울 로컬 다이어트 한의원</span>
+          <span class="cs">1년 월매출 결과</span>
+          <div class="delta">5백<small>↓</small> <span class="arr">→</span> <b>3억</b></div>
+        </div>
+        <div class="case-chart"><svg class="growth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 292" role="img" aria-label="월매출 성장 차트">
+<defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ECEA3C" stop-opacity="0.45"/><stop offset="1" stop-color="#ECEA3C" stop-opacity="0"/></linearGradient></defs><line x1="86" y1="250.0" x2="500" y2="250.0" stroke="#2a2a24" stroke-width="1"/><text x="76" y="254.0" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#7a7a70">0원</text><line x1="86" y1="216.0" x2="500" y2="216.0" stroke="#2a2a24" stroke-width="1"/><text x="76" y="220.0" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#7a7a70">5천</text><line x1="86" y1="182.0" x2="500" y2="182.0" stroke="#2a2a24" stroke-width="1"/><text x="76" y="186.0" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#7a7a70">1억</text><line x1="86" y1="114.0" x2="500" y2="114.0" stroke="#2a2a24" stroke-width="1"/><text x="76" y="118.0" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#7a7a70">2억</text><line x1="86" y1="46.0" x2="500" y2="46.0" stroke="#2a2a24" stroke-width="1"/><text x="76" y="50.0" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#7a7a70">3억</text>
+<path d="M 86.0 246.6 L 224.0 182.0 L 362.0 114.0 L 500.0 46.0 L 500.0 250.0 L 86.0 250.0 Z" fill="url(#g2)"/>
+<path d="M 86.0 246.6 L 224.0 182.0 L 362.0 114.0 L 500.0 46.0" fill="none" stroke="#ECEA3C" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="86.0" cy="246.6" r="5" fill="#fff"/><g><rect x="60.0" y="208.6" width="52" height="26" rx="7" fill="#1d1d18" stroke="#2f2f29" stroke-width="1"/><text x="86.0" y="226.6" text-anchor="middle" font-family="Pretendard,sans-serif" font-weight="700" font-size="13" fill="#fff">5백↓</text></g><circle cx="224.0" cy="182.0" r="5" fill="#fff"/><g><rect x="198.0" y="144.0" width="52" height="26" rx="7" fill="#1d1d18" stroke="#2f2f29" stroke-width="1"/><text x="224.0" y="162.0" text-anchor="middle" font-family="Pretendard,sans-serif" font-weight="700" font-size="13" fill="#fff">1억</text></g><circle cx="362.0" cy="114.0" r="5" fill="#fff"/><g><rect x="336.0" y="76.0" width="52" height="26" rx="7" fill="#1d1d18" stroke="#2f2f29" stroke-width="1"/><text x="362.0" y="94.0" text-anchor="middle" font-family="Pretendard,sans-serif" font-weight="700" font-size="13" fill="#fff">2억</text></g><circle cx="500.0" cy="46.0" r="9" fill="#ECEA3C" stroke="#0C0C0A" stroke-width="2"/><g><rect x="466.0" y="2.0" width="68" height="30" rx="8" fill="#ECEA3C"/><text x="500.0" y="23.0" text-anchor="middle" font-family="Pretendard,sans-serif" font-weight="900" font-size="16" fill="#0C0C0A">3억</text></g><text x="86.0" y="274" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12" fill="#9a9a8e">5월</text><text x="224.0" y="274" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12" fill="#9a9a8e">9월</text><text x="362.0" y="274" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12" fill="#9a9a8e">1월</text><text x="500.0" y="274" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12" fill="#9a9a8e">4월</text></svg></div>
+      </div>
+    </div>
+    <p class="proof-note">* 도입 한의원 실제 사례 기준이며, 한의원·지역·운영 조건에 따라 결과는 달라질 수 있습니다.</p>
+  </section>
+
+  <!-- CLOSING + FORM -->
+  <section class="closing" id="form">
+    <div class="ing-big">- ing</div>
+    <h2>좋은 처방만으로는<br>부족합니다</h2>
+    <p>고객이 이해하고, 직원이 설명하고, 원장이 진료하고,<br class="pcbr">다시 재구매로 이어지는 구조가 필요합니다.<br>아이엔지 다이어트는 한의원의 다이어트 진료를<br class="pcbr">브랜드·상품·상담·CRM·마케팅까지 연결된 프로그램으로 만들어드립니다.</p>
+
+    <div class="formcard">
+      <h3>우리 한의원 도입 상담</h3>
+      <p class="fdesc">현재 진료 구조를 알려주시면, 적용 가능성과 세팅 방향을 정리해 회신드립니다.</p>
+      <div id="formBody">
+        <div class="frow">
+          <div class="field"><label>한의원명</label><input type="text" id="clinic" placeholder="○○한의원"></div>
+          <div class="field"><label>담당자</label><input type="text" id="nm" placeholder="원장/실장"></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label>연락처</label><input type="tel" id="ph" placeholder="010-0000-0000"></div>
+          <div class="field"><label>지역</label><input type="text" id="region" placeholder="예) 서울 강남"></div>
+        </div>
+        <div class="field"><label>관심 항목</label>
+          <select id="topic">
+            <option value="">선택해주세요</option>
+            <option>전체 패키지 도입</option>
+            <option>상품·가격 구조</option>
+            <option>상담 프로토콜</option>
+            <option>마케팅·CRM</option>
+            <option>리포사 병행 구성</option>
+          </select>
+        </div>
+        <label class="consent"><input type="checkbox" id="cs"><span>(필수) 개인정보 수집·이용에 동의합니다. 입력하신 정보는 도입 상담 목적으로만 활용됩니다.</span></label>
+        <button class="submit" onclick="submitForm()">도입 상담 신청하기</button>
+      </div>
+      <div class="formdone" id="done">
+        <div class="ic">✓</div>
+        <p>도입 상담 신청이 접수되었습니다.<br>적용 방향을 정리해 연락드리겠습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="ft-logo">ING.</div>
+    <div>아이엔지 다이어트 · 한의원 도입 브랜드 패키지</div>
+  </footer>
+
+  <div class="fab"><a href="#form" onclick="goForm()">💬</a></div>
+
+  <div class="sticky-cta">
+    <div class="lbl">한의원 다이어트, 이제<br><span>패키지로 도입하세요</span></div>
+    <button onclick="goForm()">도입 상담</button>
+  </div>
+
+</div>
+
+<script>
+function goForm(){document.getElementById('form').scrollIntoView({behavior:'smooth'});}
+function submitForm(){
+  var c=document.getElementById('clinic').value.trim();
+  var ph=document.getElementById('ph').value.trim();
+  var cs=document.getElementById('cs').checked;
+  if(!c){alert('한의원명을 입력해주세요.');return;}
+  if(!ph){alert('연락처를 입력해주세요.');return;}
+  if(!cs){alert('개인정보 수집·이용에 동의해주세요.');return;}
+  document.getElementById('formBody').style.display='none';
+  document.getElementById('done').classList.add('show');
+}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
