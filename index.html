@@ -18,7 +18,7 @@
 <meta content="한의사 1:1 맞춤. 체질·생활습관까지 분석해 내 몸에 맞게 빼드립니다." name="twitter:description"/>
 <meta content="https://ingdiet.co.kr/og-image.png" name="twitter:image"/>
 <link href="https://cdn.jsdelivr.net/" rel="preconnect"/>
-<link href="./아이엔지 다이어트 _ 내 몸에 맞춰 진행되는 한방 다이어트_files/pretendardvariable.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" rel="stylesheet"/>
 
 <style>:root{
       --bg:#ffffff;
@@ -62,7 +62,7 @@
     .btn.ghost:hover{background:rgba(0,113,227,.075);box-shadow:none;}
     .hero-device{width:min(860px,calc(100% - 36px));margin:54px auto 0;border-radius:38px;background:linear-gradient(145deg,#fff,#f2f2f6);border:1px solid rgba(0,0,0,.08);box-shadow:var(--shadow);padding:18px;}
     .hero-panel{border-radius:28px;background:#fff;min-height:330px;display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:26px;text-align:left;align-items:stretch;}
-    .metric{background:var(--soft);border-radius:24px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;min-height:220px;}
+    .metric{background:var(--soft);border-radius:24px;padding:26px;display:flex;flex-direction:column;justify-content:center;min-height:220px;}
     .metric strong{font-size:58px;line-height:1;font-weight:800;letter-spacing:-.06em;}
     .metric span{font-size:14px;color:var(--muted);font-weight:600;margin-top:8px;display:block;}
     .mini-stack{display:grid;gap:14px;}
@@ -224,6 +224,26 @@
     @media (prefers-reduced-motion:reduce){
       .submit::after{animation:none!important;display:none;}
     }
+    /* ===== START 섹션 v2: 단일 CTA 카드 ===== */
+    .closing h2.satin-title{font-size:clamp(28px,3.4vw,44px);line-height:1.18;letter-spacing:-.045em;}
+    .closing .start-body{margin-top:16px;font-size:17px;}
+    .consult-card{max-width:460px;padding:38px 36px 36px;text-align:center;}
+    .consult-card .cc-eyebrow{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue);font-size:12px;font-weight:700;letter-spacing:-.01em;margin-bottom:14px;}
+    .consult-card .cc-eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue);}
+    .consult-card h3{font-size:27px;line-height:1.25;margin-bottom:10px;}
+    .consult-card .desc{font-size:14.5px;line-height:1.6;margin-bottom:28px;}
+    .cc-cta{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;height:56px;font-size:17px;text-decoration:none;}
+    .mobile-only-break{display:none;}
+    @media (max-width:720px){
+      .closing h2.satin-title{font-size:27px;}
+      .closing .start-body{font-size:15px;}
+      .consult-card{padding:30px 22px 26px;}
+      .consult-card h3{font-size:23px;}
+      .consult-card .desc{font-size:14px;}
+      .mobile-only-break{display:inline;}
+      .cc-cta{height:54px;font-size:16px;}
+    }
+
     .formdone{display:none;text-align:center;padding:28px 0;color:#1d1d1f;}
     .formdone.show{display:block;}
     .formdone .ic{font-size:36px;color:var(--blue);font-weight:800;}
@@ -403,7 +423,9 @@
     .feature:last-child{border-bottom:0;padding-bottom:0;}
     .dot{width:7px;height:7px;margin-top:10px;}
 
-    #type .grid.four{grid-template-columns:repeat(2,minmax(0,1fr));}
+    #type .grid.four{display:block;column-count:2;column-gap:14px;}
+    #type .type-card{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:block;margin:0 0 14px;width:100%;}
+    @media (max-width:560px){#type .grid.four{column-count:1;column-gap:0;}}
     .type-card{min-height:0;padding:26px 24px 22px;}
     .type-card .num{font-size:42px;margin-bottom:14px;font-weight:760;color:#303033;}
     .type-card small{font-size:12px;margin-bottom:8px;}
@@ -1041,6 +1063,23 @@
     transform:translateY(-2px) !important;
   }
 
+  /* 히어로 제외 하위 섹션 — 블러 강도 완화 */
+  section:not(.hero) .lux-fade-item{filter:blur(3px) !important;}
+  section:not(.hero) .lux-fade-label{filter:blur(1.5px) !important;}
+  section:not(.hero) .lux-fade-main{filter:blur(2.5px) !important;}
+  section:not(.hero) .lux-fade-body{filter:blur(2px) !important;}
+  section:not(.hero) .lux-fade-content{filter:blur(3px) !important;}
+  section:not(.hero) .lux-fade-item.lux-in{filter:blur(0) !important;}
+
+  @media (max-width:767px){
+    section:not(.hero) .lux-fade-item,
+    section:not(.hero) .lux-fade-content{filter:blur(2px) !important;}
+    section:not(.hero) .lux-fade-main{filter:blur(1.5px) !important;}
+    section:not(.hero) .lux-fade-label,
+    section:not(.hero) .lux-fade-body{filter:blur(1px) !important;}
+    section:not(.hero) .lux-fade-item.lux-in{filter:blur(0) !important;}
+  }
+
   @media (max-width:767px){
     .lux-fade-item{
       transform:translate3d(0, 12px, 0) !important;
@@ -1150,7 +1189,7 @@
 <a href="#type">Type</a>
 <a href="#program">Program</a>
 <a href="#faq">FAQ</a>
-<a class="nav-cta" href="#consult">상담 신청</a>
+<a class="nav-cta" href="https://forms.gle/ka5qLEzmnUEzdJzVA" target="_blank" rel="noopener">상담 신청</a>
 </nav>
 </div>
 </header>
@@ -1172,7 +1211,7 @@
 <div class="hero-panel">
 <div class="metric">
 <div><strong>1:1</strong><span>한의사 진단 기반 맞춤 처방</span></div>
-<p style="font-size:14px;color:#6e6e73;line-height:1.6;margin-top:24px;">체질·생활습관·감량 유형까지 확인하고, 내 몸에 맞는 방향으로 시작합니다.</p>
+<p style="font-size:14px;color:#6e6e73;line-height:1.6;margin-top:14px;">체질·생활습관·감량 유형까지 확인하고, 내 몸에 맞는 방향으로 시작합니다.</p>
 </div>
 <div class="mini-stack">
 <div class="mini-card"><b>유형별 감량 설계</b><p>식욕·부종·스트레스·대사저하 유형으로 나눠 접근합니다.</p></div>
@@ -1232,20 +1271,20 @@
 </div>
 <div class="grid four">
 <article class="tile type-card lux-fade-item lux-fade-content lux-in" style="transition-delay: 1000ms;">
-<div class="num" style="transform: translate3d(0px, -25.07px, 0px) scale(0.82);">01</div><small>한의학적 경향 · 위열</small><h3>식욕 과다형</h3><p class="desc">자주 배고프고, 한 번 먹으면 조절이 어려운 유형</p>
-<details><summary>이런 분께 해당될 수 있어요</summary><div class="detail-content"><ul><li>자주 배고프고 야식·간식이 많다</li><li>한 번 먹기 시작하면 조절이 어렵다</li><li>스트레스가 없을 때도 식욕이 강한 편이다</li></ul><div class="direction">관리 방향<br/>· 과도한 식욕 흐름을 조절하고 식사량을 안정적으로 줄이는 데 집중합니다.</div></div></details>
+<div class="num" style="transform: translate3d(0px, -25.07px, 0px) scale(0.82);">01</div><small>한의학적 경향 · 열성 식욕항진</small><h3>식욕형</h3><p class="desc">식욕이 강하고 몸이 쉽게 붓는 유형</p>
+<details><summary>이런 분께 해당될 수 있어요</summary><div class="detail-content"><ul><li>자주 배고프고 야식·간식이 많다</li><li>한 번 먹기 시작하면 조절이 어렵다</li><li>속열이 많고 얼굴이 자주 달아오른다</li></ul></div></details>
 </article>
 <article class="tile type-card lux-fade-item lux-fade-content lux-in" style="transition-delay: 1120ms;">
-<div class="num" style="transform: translate3d(0px, -25.16px, 0px) scale(0.82);">02</div><small>한의학적 경향 · 습담</small><h3>부종형</h3><p class="desc">체중 변화보다 붓기 변화가 더 큰 유형</p>
-<details><summary>이런 분께 해당될 수 있어요</summary><div class="detail-content"><ul><li>아침마다 얼굴·손발이 붓는다</li><li>몸이 무겁고 순환이 잘 안 되는 느낌이 있다</li><li>하체가 쉽게 무겁고 답답하다</li></ul><div class="direction">관리 방향<br/>· 몸의 무거운 흐름을 가볍게 하고, 수분 정체와 부종감을 줄이는 데 집중합니다.</div></div></details>
+<div class="num" style="transform: translate3d(0px, -25.16px, 0px) scale(0.82);">02</div><small>한의학적 경향 · 담음·담습</small><h3>붓기형</h3><p class="desc">몸이 자주 붓고 순환이 원활하지 않은 유형</p>
+<details><summary>이런 분께 해당될 수 있어요</summary><div class="detail-content"><ul><li>아침마다 얼굴·손발이 붓는다</li><li>물을 마시면 쉽게 붓는 느낌이 있다</li><li>하체가 쉽게 무겁고 답답하다</li></ul></div></details>
 </article>
 <article class="tile type-card lux-fade-item lux-fade-content lux-in" style="transition-delay: 1240ms;">
-<div class="num" style="transform: translate3d(0px, -24.2px, 0px) scale(0.82);">03</div><small>한의학적 경향 · 기울</small><h3>스트레스형</h3><p class="desc">감정 기복에 따라 식사량이 크게 달라지는 유형</p>
-<details><summary>이런 분께 해당될 수 있어요</summary><div class="detail-content"><ul><li>스트레스를 받으면 폭식한다</li><li>단 음식·매운 음식·야식이 자주 당긴다</li><li>잠을 잘 못 자거나 긴장이 많은 편이다</li></ul><div class="direction">관리 방향<br/>· 스트레스로 인한 식욕 변화와 흐트러진 생활 리듬을 함께 관리합니다.</div></div></details>
+<div class="num" style="transform: translate3d(0px, -24.2px, 0px) scale(0.82);">03</div><small>한의학적 경향 · 기허·습체</small><h3>대사형</h3><p class="desc">평소 몸이 무겁고 대사가 느린 유형</p>
+<details><summary>이런 분께 해당될 수 있어요</summary><div class="detail-content"><ul><li>기운이 없고 쉽게 지친다</li><li>손발이 차고 몸이 무거운 편이다</li><li>예전보다 잘 안 빠지고 정체기가 잦다</li></ul></div></details>
 </article>
 <article class="tile type-card lux-fade-item lux-fade-content lux-in" style="transition-delay: 1320ms;">
-<div class="num" style="transform: translate3d(0px, -23.19px, 0px) scale(0.82);">04</div><small>한의학적 경향 · 허증</small><h3>대사저하형</h3><p class="desc">조금만 먹어도 쉽게 찌고, 정체기가 잦은 유형</p>
-<details><summary>이런 분께 해당될 수 있어요</summary><div class="detail-content"><ul><li>예전보다 살이 잘 안 빠진다</li><li>조금만 먹어도 쉽게 찐다</li><li>기운이 없고 피로감이 많다</li></ul><div class="direction">관리 방향<br/>· 무리하게 굶기보다 대사 흐름을 고려해 지속 가능한 감량을 만듭니다.</div></div></details>
+<div class="num" style="transform: translate3d(0px, -23.19px, 0px) scale(0.82);">04</div><small>한의학적 경향 · 식적·담습</small><h3>해독형</h3><p class="desc">몸에 노폐물이 쌓여 순환이 정체되기 쉬운 유형</p>
+<details><summary>이런 분께 해당될 수 있어요</summary><div class="detail-content"><ul><li>소화가 더디고 속이 자주 더부룩하다</li><li>배변이 불규칙한 편이다</li><li>노폐물이 쌓인 듯 몸이 개운하지 않다</li></ul></div></details>
 </article>
 </div>
 </div>
@@ -1258,12 +1297,12 @@
 <span class="tw-line" data-text="가볍게 시작하거나,">가볍게 시작하거나,</span><br/>
 <span class="tw-line" data-text="집중적으로 관리하거나">집중적으로 관리하거나<span aria-hidden="true" class="tw-cursor"></span></span>
 </h2>
-<p class="body program-body-desktop lux-fade-item lux-fade-body lux-in" style="transition-delay: 420ms;">베이직형부터 커스텀형까지, 목표와 예산에 맞춰 선택할 수 있습니다.</p>
-<p class="body program-body-mobile lux-fade-item lux-fade-body lux-in" style="transition-delay: 630ms;">베이직형부터 커스텀형까지,<br/> 목표와 예산에 맞춰 선택할 수 있습니다.</p>
+<p class="body program-body-desktop lux-fade-item lux-fade-body lux-in" style="transition-delay: 420ms;">스탠다드형부터 커스텀형까지, 목표와 예산에 맞춰 선택할 수 있습니다.</p>
+<p class="body program-body-mobile lux-fade-item lux-fade-body lux-in" style="transition-delay: 630ms;">스탠다드형부터 커스텀형까지,<br/> 목표와 예산에 맞춰 선택할 수 있습니다.</p>
 </div>
 <div class="program-group-title lux-fade-item lux-fade-content lux-in" style="transition-delay: 1000ms;">아이엔지 한약 프로그램</div>
 <div class="grid three">
-<article class="tile lux-fade-item lux-fade-content lux-in is-price-open" style="transition-delay: 1240ms;"><div class="price">베이직형 · 8만원~</div><h3>아이엔지 한약 베이직형</h3><p>4주 · 표준 맞춤 처방</p><ul><li>다이어트 한약이 처음인 분</li><li>부담 없이 가볍게 시작하고 싶은 분</li><li>먼저 체험해보고 싶은 분</li></ul><p style="margin-top:18px;">8~14만원 라인업 · 개인 체질에 따라 차이가 있습니다.</p></article>
+<article class="tile lux-fade-item lux-fade-content lux-in is-price-open" style="transition-delay: 1240ms;"><div class="price">스탠다드형 · 8만원~</div><h3>아이엔지 한약 스탠다드형</h3><p>4주 · 표준 맞춤 처방</p><ul><li>다이어트 한약이 처음인 분</li><li>부담 없이 가볍게 시작하고 싶은 분</li><li>먼저 체험해보고 싶은 분</li></ul><p style="margin-top:18px;">8~14만원 라인업 · 개인 체질에 따라 차이가 있습니다.</p></article>
 <article class="tile featured lux-fade-item lux-fade-content lux-in" style="transition-delay: 1320ms;"><div class="price">스페셜형 · 20만원~</div><h3>아이엔지 한약 스페셜형</h3><p>4주 · 체질 맞춤 강화</p><ul><li>본격적으로 감량하고 싶은 분</li><li>체질·생활습관까지 반영하고 싶은 분</li><li>요요 없이 관리하고 싶은 분</li></ul><p style="margin-top:18px;">20~40만원 라인업 · 개인 체질에 따라 차이가 있습니다.</p></article>
 <article class="tile lux-fade-item lux-fade-content lux-in" style="transition-delay: 1320ms;"><div class="price">커스텀형 · 50만원~</div><h3>아이엔지 한약 커스텀형</h3><p>4주 · 1:1 개인 최적화</p><ul><li>목표가 분명한 분</li><li>완전 맞춤 관리를 원하는 분</li><li>정밀한 처방 조정을 원하는 분</li></ul><p style="margin-top:18px;">50만원~ 개인 최적화 · 개인 체질에 따라 차이가 있습니다.</p></article>
 </div>
@@ -1293,7 +1332,7 @@
 <div class="grid three">
 <div class="tile white lux-fade-item lux-fade-content lux-in" style="transition-delay: 760ms;"><div class="code">01</div><h3>한의사가 직접 진단합니다</h3><p>체중이 아니라 체질·생활패턴·식욕·부종·대사를<br class="br-mobile"/> 함께 봅니다.</p></div>
 <div class="tile white lux-fade-item lux-fade-content lux-in" style="transition-delay: 880ms;"><div class="code">02</div><h3>유형별 처방으로 접근합니다</h3><p>네 가지 유형에 따라 관리 방향이 달라집니다.</p></div>
-<div class="tile white lux-fade-item lux-fade-content lux-in" style="transition-delay: 1000ms;"><div class="code">03</div><h3>유형에 맞는 구성을 선택합니다</h3><p>베이직형부터 커스텀형까지<br class="br-mobile"/> 목표·예산에 맞게 선택할 수 있습니다.</p></div>
+<div class="tile white lux-fade-item lux-fade-content lux-in" style="transition-delay: 1000ms;"><div class="code">03</div><h3>유형에 맞는 구성을 선택합니다</h3><p>스탠다드형부터 커스텀형까지<br class="br-mobile"/> 목표·예산에 맞게 선택할 수 있습니다.</p></div>
 <div class="tile white lux-fade-item lux-fade-content lux-in" style="transition-delay: 1120ms;"><div class="code">04</div><h3>한약과 리포사 병행이 가능합니다</h3><p>체중 감량과 부분 라인 고민을 함께 관리합니다.</p></div>
 <div class="tile white lux-fade-item lux-fade-content lux-in" style="transition-delay: 1240ms;"><div class="code">05</div><h3>복용 후 체크 관리가 이어집니다</h3><p>2주 후 반응 확인과 재진으로 지속성을 높입니다.</p></div>
 </div>
@@ -1354,38 +1393,12 @@
 <div class="label lux-fade-item lux-fade-label lux-in" style="color: rgb(161, 161, 166); transition-delay: 0ms;">START</div>
 <h2 aria-label="다이어트는 의지만의 문제가 아닐 수 있습니다" class="satin-title is-word-in" data-satin="다이어트는 의지만의 문제가 아닐 수 있습니다"><span aria-hidden="true" class="stw" style="transition-delay:0ms">다이어트는 </span><span aria-hidden="true" class="stw" style="transition-delay:55ms">의지만의 </span><span aria-hidden="true" class="stw" style="transition-delay:110ms">문제가 </span><span aria-hidden="true" class="stw" style="transition-delay:165ms">아닐 </span><span aria-hidden="true" class="stw" style="transition-delay:220ms">수 </span><span aria-hidden="true" class="stw" style="transition-delay:275ms">있습니다</span></h2>
 <p class="body start-body lux-fade-item lux-fade-body lux-in" style="transition-delay: 210ms;">내 몸이 왜 쉽게 찌고, 왜 잘 빠지지 않는지부터 확인해보세요.<br class="web-only-break"/>아이엔지 다이어트는 한의사의 진단과 맞춤 처방으로 나에게 맞는 감량 방향을 정합니다.</p>
-<form class="formcard lux-fade-item lux-fade-content lux-in" id="consultForm" style="transition-delay: 760ms;">
+<div class="formcard consult-card lux-fade-item lux-fade-content lux-in" id="consultCard">
+<div class="cc-eyebrow">1:1 체질 상담</div>
 <h3>지금, 내 체질 상담 신청</h3>
-<p class="desc">상담 신청 후 담당자가 순차적으로 연락드립니다.</p>
-<div class="field"><label for="name">이름</label><input id="name" name="name" placeholder="이름을 입력해 주세요" required="" type="text"/></div>
-<div class="field"><label for="phone">연락처</label><input id="phone" name="phone" placeholder="010-0000-0000" required="" type="tel"/></div>
-<div class="field">
-<label for="programSelect">관심 프로그램</label>
-<div class="custom-select" data-custom-select="">
-<select aria-hidden="true" class="native-select-hidden" id="programSelect" name="program" tabindex="-1">
-<option>아이엔지 한약 베이직형</option>
-<option>아이엔지 한약 스페셜형</option>
-<option>아이엔지 한약 커스텀형</option>
-<option>아이엔지 한약 × 리포사 30일</option>
-<option>아이엔지 한약 × 리포사 100일</option>
-</select>
-<button aria-expanded="false" aria-haspopup="listbox" class="select-trigger" type="button">
-<span class="selected-label">아이엔지 한약 베이직형</span>
-<svg aria-hidden="true" class="chevron" fill="none" viewbox="0 0 20 20"><path d="M5.5 7.75L10 12.25L14.5 7.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
-</button>
-<div aria-label="관심 프로그램 선택" class="select-options" role="listbox">
-<button aria-selected="true" class="select-option" data-value="아이엔지 한약 베이직형" role="option" type="button"><span>아이엔지 한약 베이직형</span><span class="check">✓</span></button>
-<button aria-selected="false" class="select-option" data-value="아이엔지 한약 스페셜형" role="option" type="button"><span>아이엔지 한약 스페셜형</span><span class="check">✓</span></button>
-<button aria-selected="false" class="select-option" data-value="아이엔지 한약 커스텀형" role="option" type="button"><span>아이엔지 한약 커스텀형</span><span class="check">✓</span></button>
-<button aria-selected="false" class="select-option" data-value="아이엔지 한약 × 리포사 30일" role="option" type="button"><span>아이엔지 한약 × 리포사 30일</span><span class="check">✓</span></button>
-<button aria-selected="false" class="select-option" data-value="아이엔지 한약 × 리포사 100일" role="option" type="button"><span>아이엔지 한약 × 리포사 100일</span><span class="check">✓</span></button>
+<p class="desc">간단한 신청서만 남겨주세요. <br class="mobile-only-break"/>담당자가 확인 후 순차적으로 연락드립니다.</p>
+<a class="submit cc-cta" href="https://forms.gle/ka5qLEzmnUEzdJzVA" target="_blank" rel="noopener">상담 신청하기</a>
 </div>
-</div>
-</div>
-<label class="consent"><input required="" type="checkbox"/> <span>(필수) 개인정보 수집·이용에 동의합니다. 입력하신 정보는 상담 목적으로만 활용됩니다.</span></label>
-<button class="submit" type="submit">상담 신청하기</button>
-<div class="formdone" id="formDone"><div class="ic">✓</div><p>상담 신청이 접수되었습니다. 빠르게 연락드리겠습니다.</p></div>
-</form>
 </div>
 </section>
 </main>
@@ -1491,6 +1504,11 @@
         const shouldOpen = !details.open;
         if(details.classList.contains('qa') && shouldOpen){
           document.querySelectorAll('details.qa[open]').forEach(other => {
+            if(other !== details) setDetailsHeight(other, false);
+          });
+        }
+        if(details.closest('.type-card') && shouldOpen){
+          document.querySelectorAll('.type-card details[open]').forEach(other => {
             if(other !== details) setDetailsHeight(other, false);
           });
         }
@@ -1764,72 +1782,7 @@
       }
     }
 
-    document.querySelectorAll('[data-custom-select]').forEach((selectBox) => {
-      const nativeSelect = selectBox.querySelector('select');
-      const trigger = selectBox.querySelector('.select-trigger');
-      const label = selectBox.querySelector('.selected-label');
-      const options = Array.from(selectBox.querySelectorAll('.select-option'));
 
-      const close = () => {
-        selectBox.classList.remove('open');
-        trigger?.setAttribute('aria-expanded','false');
-      };
-      const open = () => {
-        selectBox.classList.add('open');
-        trigger?.setAttribute('aria-expanded','true');
-      };
-      const setValue = (value) => {
-        if(nativeSelect) nativeSelect.value = value;
-        if(label) label.textContent = value;
-        options.forEach((option) => {
-          const selected = option.dataset.value === value;
-          option.setAttribute('aria-selected', selected ? 'true' : 'false');
-          option.classList.toggle('is-active', selected);
-        });
-        nativeSelect?.dispatchEvent(new Event('change', {bubbles:true}));
-      };
-
-      trigger?.addEventListener('click', (event) => {
-        event.stopPropagation();
-        selectBox.classList.contains('open') ? close() : open();
-      });
-      options.forEach((option) => {
-        option.addEventListener('click', (event) => {
-          event.stopPropagation();
-          setValue(option.dataset.value || option.textContent.trim());
-          close();
-          trigger?.focus({preventScroll:true});
-        });
-      });
-      trigger?.addEventListener('keydown', (event) => {
-        if(event.key === 'Escape') close();
-        if(event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' '){
-          event.preventDefault();
-          open();
-          const current = options.find(option => option.getAttribute('aria-selected') === 'true') || options[0];
-          current?.focus({preventScroll:true});
-        }
-      });
-      options.forEach((option, index) => {
-        option.addEventListener('keydown', (event) => {
-          if(event.key === 'Escape') { close(); trigger?.focus({preventScroll:true}); }
-          if(event.key === 'ArrowDown') { event.preventDefault(); (options[index + 1] || options[0])?.focus({preventScroll:true}); }
-          if(event.key === 'ArrowUp') { event.preventDefault(); (options[index - 1] || options[options.length - 1])?.focus({preventScroll:true}); }
-          if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); option.click(); }
-        });
-      });
-      document.addEventListener('click', close);
-      window.addEventListener('scroll', close, {passive:true});
-    });
-
-    const form = document.getElementById('consultForm');
-    const done = document.getElementById('formDone');
-    form?.addEventListener('submit', function(e){
-      e.preventDefault();
-      form.classList.add('is-submitted');
-      done?.classList.add('show');
-      done?.scrollIntoView({behavior:prefersReduced ? 'auto' : 'smooth', block:'nearest'});
-    });
   })();
 
 (function(){
